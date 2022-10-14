@@ -10,31 +10,31 @@ authors:
 superuser: false
 
 # Role/position
-role: R Instructor
+role: R 教师
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
+  - name: 斯坦福大学
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: 我的研究兴趣包括分布式机器人、移动计算和可编程物质。
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - 人工智能
+  - 计算语言学
+  - 信息检索
 
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
+    - course: 人工智能博士学位
+      institution: 斯坦福大学
       year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+    - course: 孟在人工智能
+      institution: 麻省理工学院
       year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+    - course: 人工智能学士学位
+      institution: 麻省理工学院
       year: 2008
 
 # Social/Academic Networking
@@ -61,4 +61,4 @@ user_groups:
   - Teachers
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Lorem ipsum疼痛静坐amet，结果肥胖精英。渴奈精英，悲鼠胆战ac，易生擒弓。爱琴海的爱琴海。没有nec arcu pellentesque aliquet的praintut。达布里斯·达布里斯·达布里斯。

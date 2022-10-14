@@ -1,5 +1,5 @@
 ---
-title: Statistics
+title: GitLab 
 date: '2021-01-01'
 type: book
 weight: 40

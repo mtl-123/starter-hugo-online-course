@@ -6,7 +6,7 @@ widget: blank
 # This file represents a page section.
 headless: true
 
-# Order that this section appears on the page.
+# 此部分出现在页面上的顺序。
 weight: 20
 
 title:

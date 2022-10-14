@@ -1,41 +1,45 @@
 ---
-# An instance of the Contact widget.
+# 联系人小部件的实例。
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: contact
 
-# This file represents a page section.
+# 这个文件代表一个页面部分。
 headless: true
 
-# Order that this section appears on the page.
+# 此部分出现在页面上的顺序。
 weight: 10
 
-title: Contact
+title: 搜索引擎
 subtitle:
 
 content:
   # Contact (edit or remove options as required)
-  email: test@example.org
-  appointment_url: 'https://calendly.com'
-  contact_links:
-    - icon: comments
-      icon_pack: fas
-      name: Discuss on the forum
-      link: 'https://github.com/wowchemy/wowchemy-hugo-themes/discussions'
+  # email: test@example.org
+  # appointment_url: 'https://calendly.com'
+  # contact_links:
+  #   - icon: comments
+  #     icon_pack: fas
+  #     name: Discuss on the forum
+  #     link: 'https://github.com/wowchemy/wowchemy-hugo-themes/discussions'
 
-  # Automatically link email and phone or display as text?
+  # 自动链接电子邮件和电话或显示为文本？
   autolink: true
 
-  # Email form provider
+  # 电子邮件表单提供商
   form:
     provider: netlify
     formspree:
       id:
     netlify:
-      # Enable CAPTCHA challenge to reduce spam?
-      captcha: false
+      # 启用验证码挑战以减少垃圾邮件？
+      captcha: true
 
 design:
   columns: '1'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus augue non tempor egestas. Proin nisl nunc, dignissim in accumsan dapibus, auctor ullamcorper neque. Quisque at elit felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget elementum odio. Cras interdum eget risus sit amet aliquet. In volutpat, nisl ut fringilla dignissim, arcu nisl suscipit ante, at accumsan sapien nisl eu eros.
+# 搜索引擎推荐
+
+[百度开发者](https://kaifa.baidu.com/)
+
+[学习资源技术栈](https://yangchaoyi.vip/box/)

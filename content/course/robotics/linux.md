@@ -1,6 +1,6 @@
 ---
-title: Python basics
-date: '2021-01-01'
+title: Linux 基础
+date: '2022-10-14'
 type: book
 weight: 20
 ---
@@ -9,15 +9,15 @@ Build a foundation in Python.
 
 <!--more-->
 
-{{< icon name="clock" pack="fas" >}} 1-2 hours per week, for 8 weeks
+{{< icon name="clock" pack="fas" >}} 每周1-2小时，持续8周
 
-## Learn
+## 学习
 
 {{< youtube rfscVS0vtbw >}}
 
-## Quiz
+## 测试
 
-{{< spoiler text="What is the difference between lists and tuples?" >}}
+{{< spoiler text="列表和元组之间的区别是什么?" >}}
 Lists
 
 - Lists are mutable - they can be changed
@@ -34,3 +34,6 @@ Tuples
 {{< spoiler text="Is Python case-sensitive?" >}}
 Yes
 {{< /spoiler >}}
+
+## 学习资料
+[Vim-command](https://yelog.org/2017/03/06/Vim-command/)

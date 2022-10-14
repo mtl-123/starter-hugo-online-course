@@ -1,7 +1,7 @@
 ---
-title: 📊 开发技术栈
+title: 📊 DevOpsS 自动化
 linkTitle: Data Science
-summary: 使用Wowchemy的图书布局发布在线课程的例子。
+summary: 自动化技术知识点
 date: '2021-01-24'
 type: book
 tags:

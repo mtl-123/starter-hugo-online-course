@@ -2,7 +2,7 @@
 widget: portfolio
 headless: true
 weight: 30
-title: Explore top courses
+title: 探索高级课程
 subtitle:
 content:
   filters:
@@ -16,11 +16,11 @@ content:
   filter_default: 0
 
   filter_button:
-    - name: All Courses
+    - name: 所有课程
       tag: '*'
-    - name: Previous
+    - name: 以前的
       tag: previous
-    - name: Current
+    - name: 当前的
       tag: current
 design:
   columns: '1'

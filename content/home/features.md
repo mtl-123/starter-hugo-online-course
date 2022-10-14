@@ -2,19 +2,19 @@
 widget: featurette
 headless: true
 weight: 20
-title: Features
-subtitle: ✨ Teach _anything_ with
+title: 特性
+subtitle: ✨ 教今天的
 feature:
   - icon: chalkboard-teacher
     icon_pack: fas
-    name: Slides
+    name: 幻灯片
     description:
   - icon: video
     icon_pack: fas
-    name: Video
+    name: 视频
     description:
   - icon: code
     icon_pack: fas
-    name: Math & Code
+    name: 数学与代码
     description:
 ---

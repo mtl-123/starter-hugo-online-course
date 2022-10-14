@@ -1,43 +1,44 @@
 ---
-title: 🤖 Learn Robotics
-linkTitle: Learn Robotics
-summary: An example of using Wowchemy's Book layout for publishing online courses.
-date: '2021-01-24'
+title: 🤖 运维开发
+linkTitle: 运维开发
+summary: 运维开发技术记录
+date: '2022-10-14'
 type: book
 tags:
   - previous
 ---
 
+
 {{< figure src="featured.jpg" >}}
 
 {{< toc hide_on="xl" >}}
 
-## What you will learn
+## 你将学到什么
 
 - Fundamental {{<hl>}}Python programming skills{{</hl>}}
 - {{<hl>}}Statistical concepts{{</hl>}} and how to apply them in practice
 - Gain experience with the {{<hl>}}Scikit{{</hl>}}, including data visualization with {{<hl>}}Plotly{{</hl>}} and data wrangling with {{<hl>}}Pandas{{</hl>}}
 
-## Program overview
+## 计划概述
 
-The demand for skilled data science practitioners is rapidly growing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.
+对熟练数据科学从业人员的需求正在迅速增长。Lorem ipsum疼痛静坐amet，结果肥胖精英。杜斯·波萨雷斯·AC车队。proin tincidunt大规模sed ex-request conditionum .原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味辛酸原味。口渴ac诈痛，修辞学索取nisi。
 
-## Courses in this program
+## 这个项目中的课程
 
 {{< list_children >}}
 
-## Meet your instructor
+## 见见你的导师
 
 {{< mention "admin" >}}
 
-## FAQs
+## 常见问题
 
 {{< spoiler text="Are there prerequisites?" >}}
-There are no prerequisites for the first course.
+第一门课没有先决条件。
 {{< /spoiler >}}
 
 {{< spoiler text="How often do the courses run?" >}}
-Continuously, at your own pace.
+持续地，按照你自己的步调。
 {{< /spoiler >}}
 
 {{< cta cta_text="Begin the course" cta_link="python" >}}

@@ -1,42 +1,42 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: 纳尔逊·比盖蒂
 
-# Is this the primary user of the site?
+# 这是该站点的主要用户吗？
 superuser: true
 
 # Role/position
-role: Python Instructor
+role: Python 教师
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
+  - name: 斯坦福大学
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - 人工智能
+  - 计算语言学
+  - 信息检索
 
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
+    - course: 人工智能博士学位
+      institution: 斯坦福大学
       year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+    - course: 孟在人工智能领域
+      institution: 麻省理工学院
       year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+    - course: 人工智能理科学士
+      institution: 麻省理工学院
       year: 2008
 
-# Social/Academic Networking
-# For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
+# 社交/学术网络
+# 有关可用图标，请参见: https://wowchemy.com/docs/getting-started/page-builder/#icons
+# 对于电子邮件链接，请使用“fas”图标包、“信封”图标以及
+# form“mailto:your-email @ example . com”或“#contact”作为联系人小工具。
 social:
   - icon: envelope
     icon_pack: fas
@@ -48,16 +48,16 @@ social:
     icon_pack: fab
     link: https://github.com/gcushen
 
-# Enter email to display Gravatar (if Gravatar enabled in Config)
+# 输入电子邮件以显示Gravatar (if Gravatar enabled in Config)
 email: ''
 
-# Highlight the author in author lists? (true/false)
+# 在作者列表中突出显示作者？(true/flase)
 highlight_name: false
 
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
+# 您所属的组织组(针对人员小部件)
+# 将此项设置为`[]`或注释掉(如果您没有使用人物小部件)。
 user_groups:
   - Teachers
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+如果他在受苦，人们会认为他在帮助他。但他不喜欢，他喜欢飞行，让生活更轻松。普罗因需要蔬菜。Praesent ut sem nec arcu pellentesque球拍。两英寸的钻石或恐惧都容易受到时间的影响。

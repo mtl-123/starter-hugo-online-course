@@ -1,9 +1,7 @@
-# SITE SETUP
-# Guide: https://wowchemy.com/docs/getting-started/
-# Documentation: https://wowchemy.com/docs/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
-
-# Appearance
+#站点设置
+#指南:https://wowchemy.com/docs/getting-started/
+#文档:https://wowchemy.com/docs/该文件使用YAML语法格式化-更多信息请访问https://learnxinyminutes.com/docs/yaml/
+# 外观
 
 appearance:
   theme_day: custom
@@ -27,7 +25,7 @@ marketing:
     google: ''
     baidu: ''
 
-# Site header
+# 网站标题
 
 header:
   navbar:
@@ -39,7 +37,7 @@ header:
     show_search: true
     highlight_active_link: true
 
-# Site footer
+# 站点页脚
 
 footer:
   copyright:
@@ -50,13 +48,13 @@ footer:
       share_alike: true
       allow_commercial: false
 
-# Localization
+# 本地化
 
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
+  date_format: 'October 15, 2022'
+  time_format: '1:04 PM'
 
-# Site features
+# 网站功能
 
 features:
   syntax_highlighter:

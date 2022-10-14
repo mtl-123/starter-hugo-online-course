@@ -1,36 +1,36 @@
 ---
-title: Python basics
-date: '2021-01-01'
+title: Python 开发
+date: '2021-10-14'
 type: book
 weight: 20
 ---
 
-Build a foundation in Python.
+用Python建立一个基础。
 
 <!--more-->
 
-{{< icon name="clock" pack="fas" >}} 1-2 hours per week, for 8 weeks
+{{< icon name="clock" pack="fas" >}} 每周1-2小时，持续8周
 
-## Learn
+## 视频学习
 
-{{< youtube rfscVS0vtbw >}}
+{{< youtube Ob_LKCLxg2o>}}
 
-## Quiz
+## 测试
 
-{{< spoiler text="What is the difference between lists and tuples?" >}}
-Lists
+{{< spoiler text="列表和元组之间的区别是什么?" >}}
+Lists [列表]
 
-- Lists are mutable - they can be changed
-- Slower than tuples
-- Syntax: `a_list = [1, 2.0, 'Hello world']`
+- 列表是可变的——它们可以被更改
+- 低于元组
+- 语法: `a_list = [1, 2.0, 'Hello world']`
 
-Tuples
+Tuples [元组]
 
-- Tuples are immutable - they can't be changed
-- Tuples are faster than lists
-- Syntax: `a_tuple = (1, 2.0, 'Hello world')`
+- 元组是不可变的——它们不能被改变
+- 元组比列表快
+- 语法: `a_tuple = (1, 2.0, 'Hello world')`
   {{< /spoiler >}}
 
-{{< spoiler text="Is Python case-sensitive?" >}}
-Yes
+{{< spoiler text="Python区分大小写吗?" >}}
+是
 {{< /spoiler >}}
