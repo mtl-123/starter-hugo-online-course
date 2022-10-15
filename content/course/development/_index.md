@@ -1,14 +1,15 @@
 ---
 title: 📊 开发技术栈
-linkTitle: Data Science
-summary: 使用Wowchemy的图书布局发布在线课程的例子。
+linkTitle: Home
+summary: 技术知识描述
 date: '2021-01-24'
 type: book
 tags:
   - current
 ---
 
-{{< figure src="featured.jpg" >}}
+{{< figure src="http://www.4kjia.com/data/attachment/forum/201808/23/104341gazjxdzxu28puoai.jpg" >}}
+
 
 {{< toc hide_on="xl" >}}
 

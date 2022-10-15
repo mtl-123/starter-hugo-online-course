@@ -9,9 +9,9 @@ tags:
 ---
 
 
-{{< figure src="featured.jpg" >}}
+{{< figure src="deploy.jpg" >}}
 
-{{< toc hide_on="xl" >}}
+{{< toc hide_on="x1" >}}
 
 ## 你将学到什么
 

@@ -1,13 +1,27 @@
 ---
-title: Linux 基础
-date: '2022-10-14'
+title: Linux 用户管理
+date: '2022-10-15'
 type: book
 weight: 20
 ---
 
-
-
 <!--more-->
+
+## who 命令
+- 查看当前已登录系统的用户名称。 输出：用户名、tty号、时间日期、主机地址
+```bash
+vagrant@m1:~$ who
+vagrant  pts/0        2022-10-15 15:22 (10.0.2.2)
+```
+- 只列出用户
+```bash
+vagrant@m1:~$ who | cut -d' ' -f1 | sort | uniq
+vagrant
+# 或者
+vagrant@m1:~$ users
+vagrant
+
+```
 
 {{< icon name="clock" pack="fas" >}} 每周1-2小时，持续8周
 

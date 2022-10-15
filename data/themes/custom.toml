@@ -1,20 +1,20 @@
-# Theme metadata
+# 主题的元数据
 name = "Custom Theme"
 
 [light]
-  # Primary
+  # 主要的
   primary = "#0072ff"
 
-  # Links
+  # 链接
   link = "#3273dc"
   link_hover = "rgb(54, 54, 54)"
 
-  # Menu
+  # 菜单
   menu_primary = "rgb(153,238,255)"
   menu_text = "#000"
   menu_text_active = "#0072ff"
   menu_title = "#000"
 
-  # Home sections
+  # 主页部分
   home_section_odd = "rgb(255, 255, 255)"
   home_section_even = "rgb(255, 255, 255)"

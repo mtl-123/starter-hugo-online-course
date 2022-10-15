@@ -1,10 +1,10 @@
 ---
-title: 博客编写
-date: 2022-10-14
+title: hugo项目框架说明
+date: 2022-10-15
 ---
 
 
-博客结构目录说明
+hugo博客结构目录说明
 
 <!--more-->
 
@@ -30,8 +30,8 @@ date: 2022-10-14
 │  │  └─robotics
 │  ├─home				# 主页
 │  └─post				# 博客编写位置
-│      ├─20-12-01-wowchemy-prize
-│      └─20-12-02-ICML-best-paper
+│      ├─01 # 这是创建的文件夹名称，在该文件夹下面可新建一个xx.md的markdown文件进行编写博客文章
+│      └─02
 ├─data
 │  ├─fonts				# 字体
 │  └─themes				# 主题

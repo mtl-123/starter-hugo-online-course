@@ -1,0 +1,140 @@
+---
+title: Docker的安装
+date: '2022-10-15'
+type: book
+weight: 40
+math: true
+tags:
+  - Statistics
+---
+
+## ubuntu
+### apt安装
+```bash
+# 1. 设置存储库
+sudo apt-get install \
+  ca-certificates \
+  curl \
+  gnupg \
+  lsb-release -y
+
+# 2. 添加Docker的官方GPG密钥
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+# 3. 设置存储库
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# 4. 安装Docker引擎
+sudo apt-get update
+# 4.1 安装最新版本
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+
+# ================================安装指定版本的docker================================================
+# 4.2 安装指定版本
+# 列出docker版本号
+apt-cache madison docker-ce 
+
+# 创建变量写入想要安装的版本号
+version="19.03.8"
+# 查找版本号信息并打印出版本号
+vagrant@m1:~$ apt-cache madison docker-ce | grep $version | awk '{print $3 }'
+# 这是查找出的结果
+5:19.03.8~3-0~ubuntu-bionic
+# 开始安装
+sudo apt-get install docker-ce=5:19.03.8~3-0~ubuntu-bionic docker-ce-cli=5:19.03.8~3-0~ubuntu-bionic containerd.io -y
+# 查看版本号
+docker version
+
+```
+### 配置daemon.jso
+```bash
+cat <<EOF >/etc/docker/daemon.json
+{
+  "exec-opts":["native.cgroupdriver=systemd"],
+
+  "registry-mirrors": [
+    "https://dockerhub.azk8s.cn",
+    "https://reg-mirror.qiniu.com"
+  ]
+}
+EOF
+```
+### 添加到用户组
+```bash
+sudo usermod -aG docker $USER
+newgrp docker
+```
+### 加载配置、重启、添加开机自启动
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+sudo systemctl enable docker
+```
+### 卸载docker
+`sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-compose-plugin -y`
+
+### 二进制安装(推荐安装方法)
+
+```bash
+# 下载二进制文件
+wget https://download.docker.com/linux/static/stable/x86_64/docker-19.03.8.tgz
+# 解压
+tar -zxvf docker-19.03.8.tgz
+# 移动
+sudo mv docker/* /usr/local/bin
+
+# 添加开机自启动文件
+# docker.service 内容如下
+sudo vim /lib/systemd/system/docker.service
+
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target firewalld.service
+Wants=network-online.target
+
+[Service]
+Type=notify
+ExecStart=/usr/local/bin/dockerd		# 注意修改解压文件的绝对路径
+ExecReload=/bin/kill -s HUP $MAINPID
+LimitNOFILE=infinity
+LimitNPROC=infinity
+TimeoutStartSec=0
+Delegate=yes
+KillMode=process
+Restart=on-failure
+StartLimitBurst=3
+StartLimitInterval=60s
+
+[Install]
+WantedBy=multi-user.target
+
+# 添加开机自启动
+sudo systemctl enable docker
+
+```
+
+  
+## centos
+
+## 修改docker默认存储路径
+
+```bash
+sudo vim /etc/docker/daemon.json
+{
+  "exec-opts":["native.cgroupdriver=systemd"],
+
+  "registry-mirrors": [
+    "https://dockerhub.azk8s.cn",
+    "https://reg-mirror.qiniu.com",
+    #这里是修改的docker粗出路径
+    "data-root":"/home/storage"
+  ]
+}
+
+# 查看修改过的存储路径
+sudo docker info | grep "Docker Root Dir:"
+```

@@ -1,6 +1,6 @@
 ---
-title: 📊 GitLab 私有化
-linkTitle: GitLab
+title: 👀 自动化技术栈
+linkTitle: DevOps
 summary: 自动化技术知识点
 date: '2022-10-15'
 type: book
