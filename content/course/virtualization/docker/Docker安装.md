@@ -43,8 +43,10 @@ version="19.03.8"
 vagrant@m1:~$ apt-cache madison docker-ce | grep $version | awk '{print $3 }'
 # 这是查找出的结果
 5:19.03.8~3-0~ubuntu-bionic
+# 再创建一个变量
+getversion="5:19.03.8~3-0~ubuntu-bionic"
 # 开始安装
-sudo apt-get install docker-ce=5:19.03.8~3-0~ubuntu-bionic docker-ce-cli=5:19.03.8~3-0~ubuntu-bionic containerd.io -y
+sudo apt-get install docker-ce=$getversion docker-ce-cli=$getversion containerd.io -y
 # 查看版本号
 docker version
 
@@ -137,4 +139,17 @@ sudo vim /etc/docker/daemon.json
 
 # 查看修改过的存储路径
 sudo docker info | grep "Docker Root Dir:"
+```
+## Docker 降级
+> 降级并安装指定版本
+### ubuntu
+```bash
+# 先查看本机源是否有需要降级指定的版本(如果没有请添加指定版本的docker安装源)
+apt-cache madison docker-ce 
+# 开始降级
+sudo apt-get --allow-downgrades --allow-change-held-packages install docker-ce=18.03.1~ce~3-0~ubuntu`
+```
+### centos
+```bash
+yum downgrade --setopt=obsoletes=0 -y docker-ce-${version} docker-ce-selinux-${version}`
 ```
