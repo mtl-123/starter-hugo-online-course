@@ -1,39 +1,36 @@
 ---
-title: Linux 基础
-date: '2022-10-14'
+title: Visualization
+date: '2021-01-01'
 type: book
-weight: 20
+weight: 30
+highlight: true
+tags:
+  - Data Visualization
 ---
 
-Build a foundation in Python.
+Learn how to visualize data with Plotly.
 
 <!--more-->
 
-{{< icon name="clock" pack="fas" >}} 每周1-2小时，持续8周
+{{< icon name="clock" pack="fas" >}} 1-2 hours per week, for 8 weeks
 
-## 学习
+## Learn
 
-{{< youtube rfscVS0vtbw >}}
+{{< youtube hSPmj7mK6ng >}}
 
-## 测试
+## Quiz
 
-{{< spoiler text="列表和元组之间的区别是什么?" >}}
-Lists
-
-- Lists are mutable - they can be changed
-- Slower than tuples
-- Syntax: `a_list = [1, 2.0, 'Hello world']`
-
-Tuples
-
-- Tuples are immutable - they can't be changed
-- Tuples are faster than lists
-- Syntax: `a_tuple = (1, 2.0, 'Hello world')`
-  {{< /spoiler >}}
-
-{{< spoiler text="Is Python case-sensitive?" >}}
-Yes
+{{< spoiler text="When is a heatmap useful?" >}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 {{< /spoiler >}}
 
-## 学习资料
-[Vim-command](https://yelog.org/2017/03/06/Vim-command/)
+{{< spoiler text="Write Plotly code to render a bar chart" >}}
+
+```python
+import plotly.express as px
+data_canada = px.data.gapminder().query("country == 'Canada'")
+fig = px.bar(data_canada, x='year', y='pop')
+fig.show()
+```
+
+{{< /spoiler >}}

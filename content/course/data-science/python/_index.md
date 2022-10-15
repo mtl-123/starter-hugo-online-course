@@ -1,43 +1,43 @@
 ---
-title: 📊 GitLab 私有化
-linkTitle: GitLab
-summary: 自动化技术知识点
+title: 📊 Python 学习区
+linkTitle: Python
+summary: Python学习笔记
 date: '2022-10-15'
 type: book
 tags:
   - current
 ---
 
-{{< figure src="featured.jpg" >}} 
+{{< figure src="featured.jpg" >}}
 
 {{< toc hide_on="xl" >}}
 
-## 你会学到什么
+## What you will learn
 
 - Fundamental {{<hl>}}Python programming skills{{</hl>}}
 - {{<hl>}}Statistical concepts{{</hl>}} and how to apply them in practice
 - Gain experience with the {{<hl>}}Scikit{{</hl>}}, including data visualization with {{<hl>}}Plotly{{</hl>}} and data wrangling with {{<hl>}}Pandas{{</hl>}}
 
-## 项目概述
+## Program overview
 
-对熟练数据科学从业者的需求正在迅速增长。Lorem ipsum dolor sit amet, conttetur adipisciscing精英。我是说，我是说，我是说，我是说。根据自己的口味。我是你的主人，我是你的主人。
+The demand for skilled data science practitioners is rapidly growing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.
 
-## 本项目课程
+## Courses in this program
 
 {{< list_children >}}
 
-## 满足你的教练
+## Meet your instructor
 
 {{< mention "admin" >}}
 
 ## FAQs
 
 {{< spoiler text="Are there prerequisites?" >}}
-第一门课程没有先决条件。
+There are no prerequisites for the first course.
 {{< /spoiler >}}
 
 {{< spoiler text="How often do the courses run?" >}}
-按照你自己的节奏，不断地。
+Continuously, at your own pace.
 {{< /spoiler >}}
 
 {{< cta cta_text="Begin the course" cta_link="python" >}}

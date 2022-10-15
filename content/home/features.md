@@ -3,7 +3,7 @@ widget: featurette
 headless: true
 weight: 20
 title: 特性
-subtitle: ✨ 教今天的
+subtitle: ✨ 今天学习
 feature:
   - icon: chalkboard-teacher
     icon_pack: fas

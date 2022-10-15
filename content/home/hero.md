@@ -2,7 +2,7 @@
 widget: hero
 headless: true
 weight: 10
-title: 网络课程模板
+title: 努力变得更好
 hero_media: teacher.png
 design:
   background:
@@ -12,7 +12,7 @@ design:
     text_color_light: false
 cta:
   url: '#courses'
-  label: 探索我们的课程
+  label: 请查看文章
   icon_pack: fas
   icon: user-graduate
 cta_alt:

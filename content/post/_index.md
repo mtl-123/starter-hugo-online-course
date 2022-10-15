@@ -1,13 +1,13 @@
 ---
-title: Latest News
+title: 最新消息
 
 # View.
 #   1 = List
 #   2 = Compact
 #   3 = Card
-view: 2
+view: 3
 
-# Optional header image (relative to `static/media/` folder).
+# 可选标题图片 (relative to `static/media/` folder).
 header:
   caption: ''
   image: ''

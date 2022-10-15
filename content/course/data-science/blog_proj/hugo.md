@@ -1,11 +1,11 @@
 ---
-title: Blog 开发
+title: hugo 框架
 date: '2022-10-14'
 type: book
 weight: 20
 ---
 
-博客主题修改, 内容编辑
+使用hugo框架搭建免费的个人博客
 
 <!--more-->
 

@@ -4,19 +4,19 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: '运维开发🎀' # Website name
-baseURL: 'https://example.com/' # Website URL
+baseURL: 'https://meitaolin.netlify.app/' # Website URL
 
 ############################
 ## PAGE OPTIONS
 ############################
 
 cascade:
-  # Docs folder options
+  # Docs文件夹选项
   - _target:
       path: /course/**
     editable: true
     show_breadcrumb: true
-  # Blog post folder options
+  # 博客帖子文件夹选项
   - _target:
       path: /post/**
     show_related: true

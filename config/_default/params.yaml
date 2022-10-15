@@ -16,7 +16,7 @@ marketing:
     site_type: Organization
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo learning theme powered by Wowchemy website builder.'
+    description: '一个高度可定制的Hugo学习主题,由Wowchemy网站构建器提供支持。'
     twitter: 'wowchemy'
   analytics:
     google_analytics: ''

@@ -1,20 +1,20 @@
 ---
-title: 📊 Database
-linkTitle: Database
-summary: 数据库技术栈
-date: '2021-01-24'
+title: 📊 Shell 编成
+linkTitle: Shell
+summary: Shell学习记录文档
+date: '2022-10-15'
 type: book
 tags:
   - current
 ---
 
-{{< figure src="database.jpeg" >}}
+{{< figure src="featured.jpg" >}}
 
 {{< toc hide_on="xl" >}}
 
-## What you will learn
+## 学习计划
 
-- Fundamental {{<hl>}}Python programming skills{{</hl>}}
+- Fundamental {{<hl>}}Shell programming skills{{</hl>}}
 - {{<hl>}}Statistical concepts{{</hl>}} and how to apply them in practice
 - Gain experience with the {{<hl>}}Scikit{{</hl>}}, including data visualization with {{<hl>}}Plotly{{</hl>}} and data wrangling with {{<hl>}}Pandas{{</hl>}}
 

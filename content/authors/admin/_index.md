@@ -14,7 +14,7 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: 我的研究兴趣包括分布式机器人、移动计算和可编程物质。
 
 interests:
   - 人工智能
