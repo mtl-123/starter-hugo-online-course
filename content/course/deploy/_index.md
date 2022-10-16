@@ -1,8 +1,8 @@
 ---
 title: 🤖 运维开发
-linkTitle: 运维开发
+linkTitle: Home
 summary: 运维开发技术记录
-date: '2022-10-14'
+date: '2022-10-16'
 type: book
 tags:
   - current
