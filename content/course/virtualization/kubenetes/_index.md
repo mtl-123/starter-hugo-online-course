@@ -5,7 +5,7 @@ summary: 容器编排集群
 date: '2022-10-14'
 type: book
 tags:
-  - previous
+  - Kubernetes
 ---
 
 

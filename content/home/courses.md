@@ -18,10 +18,15 @@ content:
   filter_button:
     - name: 所有课程
       tag: '*'
-    - name: 以前的
-      tag: previous
-    - name: 当前的
+    - name: Kubernetes
+      tag: Kubernetes
+    - name: 虚拟化
+      tag: virtualization
+    - name: 运维
       tag: current
+    - name: 开发
+      tag: develop
+
 design:
   columns: '1'
   view: masonry

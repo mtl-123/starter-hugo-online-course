@@ -5,7 +5,7 @@ summary: 运维开发技术记录
 date: '2022-10-14'
 type: book
 tags:
-  - previous
+  - current
 ---
 
 

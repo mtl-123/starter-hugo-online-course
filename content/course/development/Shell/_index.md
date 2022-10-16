@@ -5,7 +5,7 @@ summary: Shell学习记录文档
 date: '2022-10-15'
 type: book
 tags:
-  - current
+  - develop
 ---
 
 {{< figure src="featured.jpg" >}}

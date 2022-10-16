@@ -5,7 +5,7 @@ summary: 技术知识描述
 date: '2021-01-24'
 type: book
 tags:
-  - current
+  - develop
 ---
 
 {{< figure src="http://www.4kjia.com/data/attachment/forum/201808/23/104341gazjxdzxu28puoai.jpg" >}}

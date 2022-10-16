@@ -5,7 +5,7 @@ summary: 容器技术
 date: '2022-10-15'
 type: book
 tags:
-  - previous
+  - virtualization
 ---
 
 {{< toc hide_on="x1" >}}
