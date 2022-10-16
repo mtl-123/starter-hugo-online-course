@@ -8,6 +8,8 @@ tags:
   - previous
 ---
 
+{{< toc hide_on="x1" >}}
+
 ## Docker 学习路线图
 
 {{< figure src="https://img.icons8.com/fluency/1000/000000/docker.png" >}}
@@ -18,7 +20,7 @@ tags:
 ## Docker运维流程图
 
 {{< figure src="https://img-blog.csdnimg.cn/20201224164351843.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Fkb3JhYmxlXw==,size_16,color_FFFFFF,t_70" >}}
-{{< toc hide_on="xl" >}}
+
 
 ## Docker 常用命令
 {{< figure src="https://img-blog.csdnimg.cn/2020122421132889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Fkb3JhYmxlXw==,size_16,color_FFFFFF,t_70#pic_center" >}}
