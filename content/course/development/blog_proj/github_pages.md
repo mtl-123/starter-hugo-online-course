@@ -12,8 +12,12 @@ weight: 20
 
 ## 一、在GitHub上面创建一个名为yourname.github.io的一个仓库
 
+{{< figure src="image-20221017010146848.png" >}}
+
+
 ![image-20221017010146848](github_image/image-20221017010146848.png)
 
+![](./github_image/image-20221015222200003.png)
 ![image-20221015222200003](github_image/image-20221015222200003.png)
 
 ## 二、仓库创建成功
