@@ -45,3 +45,13 @@ design:
 [学习资源技术栈](https://yangchaoyi.vip/box/)
 
 [书栈网](https://www.bookstack.cn/)
+
+[webra](https://www.webra.top)
+
+[知识检索](https://www.cn-ki.net/)
+
+[wikiHow](https://zh.wikihow.com/)
+
+[编程导航](https://www.code-nav.cn/)
+
+[searx](https://searx.space/)

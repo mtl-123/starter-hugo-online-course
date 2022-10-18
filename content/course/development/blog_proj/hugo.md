@@ -9,7 +9,10 @@ weight: 20
 
 <!--more-->
 
-
+windows 系统安装 Scope 软件安装工具
+```vbs
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
 # 代码托管,自动构建部署,发布平台
 
 [netlify](https://app.netlify.com)

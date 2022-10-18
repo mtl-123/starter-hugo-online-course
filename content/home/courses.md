@@ -26,6 +26,8 @@ content:
       tag: current
     - name: 开发
       tag: develop
+    - name: 数据库
+      tag: database
 
 design:
   columns: '1'

@@ -2,15 +2,17 @@
 title: 📊 Database
 linkTitle: Database
 summary: 数据库技术栈
-date: '2021-01-24'
+date: '2022-10-19'
 type: book
 tags:
-  - current
+  - database
 ---
 
 {{< figure src="database.jpeg" >}}
 
 {{< toc hide_on="xl" >}}
+
+[数据库 代码生成-SQL之父](https://sqlfather.com)
 
 ## What you will learn
 
