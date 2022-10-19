@@ -19,5 +19,7 @@ Windows11 命令行安装：`winget install --id Git.Git -e --source winget`
 ```bash
 # Ubuntu 
 apt-get install git -y
+# CentOS
+yum install git -y
 ```
 
