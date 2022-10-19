@@ -8,16 +8,14 @@ tags:
   - current
 ---
 
-
-
-# 跨境电商
-
+## 跨境电商
 ## 亚马逊电商教程
+
 [牛津小马哥视频](https://www.bilibili.com/video/BV18y4y1a7iE/?spm_id_from=333.337.search-card.all.click&vd_source=ade47f4723248080479cf8996bc0c4b0)
 
 ![image-20221017175017272](images\image-20221017175017272.png)
 
-[amz123 跨境卖家导航](https://www.amz123.com/)
+![amz123 跨境卖家导航](https://www.amz123.com/)
 
 选择北美站注册
 
