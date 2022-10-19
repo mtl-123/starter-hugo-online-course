@@ -10,6 +10,8 @@ weight: 20
 
 <!--more-->
 
+{{< figure src="sdlc.png" >}}
+
 {{< toc hide_on="xl" >}}
 
 # 软件开发生命周期
@@ -17,7 +19,7 @@ weight: 20
 软件开发生命周期又叫做 SDLC (Software Development Life Cycle), 它集合了计划、开发、
 测试和部署过程的集合。如下图所示：
 
-![SDLC](./sdlc.png)
+![SDLC](sdlc.png)
 
 - 需求分析
 
