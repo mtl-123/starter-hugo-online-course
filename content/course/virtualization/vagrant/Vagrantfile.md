@@ -194,4 +194,9 @@ Vagrant.configure("2") do |config|
                 v.name = opts[:name]
               v.customize ["modifyvm", :id, "--groups", "/Ballerina Development"]
                 v.customize ["modifyvm", :id, "--memory", opts[:mem]]
+            end
+        end
+    end
+end
+
 ```
