@@ -9,6 +9,7 @@ weight: 20
 > 使用Vagrantfile 批量创建虚拟机
 
 ### 写法一
+
 > 创建一个名称为 Vagrantfile 的文件并写入下面脚本信息
 
 ```ruby
@@ -42,38 +43,40 @@ Vagrant.configure("2") do | config|
  end
 
 ```
+
 ### 写法二
 
 ```ruby
 Vagrant.configure("2") do | config|
-	(1..3).each do |i|
-		config.vm.define "k8s-node#{i}" do |node|
-			# 设置虚拟机的Box
-			node.vm.box = "centos/7"
+ (1..3).each do |i|
+  config.vm.define "k8s-node#{i}" do |node|
+   # 设置虚拟机的Box
+   node.vm.box = "centos/7"
 
-			# 设置虚拟机的主机名
-			node.vm.hostname="k8s-node#{i}"
+   # 设置虚拟机的主机名
+   node.vm.hostname="k8s-node#{i}"
 
-			# 设置虚拟机的IP
-			node.vm.network "private_network", ip: "192.168.56.#{99+i}", netmask: "255.255.255.0"
+   # 设置虚拟机的IP
+   node.vm.network "private_network", ip: "192.168.56.#{99+i}", netmask: "255.255.255.0"
 
-			# 设置主机与虚拟机的共享目录
-			# node.vm.synced_folder "~/Documents/vagrant/share", "/home/vagrant/share"
+   # 设置主机与虚拟机的共享目录
+   # node.vm.synced_folder "~/Documents/vagrant/share", "/home/vagrant/share"
 
-			# VirtaulBox相关配置
-			node.vm.provider "virtualbox" do |v|
-				# 设置虚拟机的名称
-				v.name = "k8s-node#{i}"
-				# 设置虚拟机的内存大小
-				v.memory= 4096
-				# 设置虚拟机的CPU个数
-				v.cpus = 4
-			end
-		end
-	end
+   # VirtaulBox相关配置
+   node.vm.provider "virtualbox" do |v|
+    # 设置虚拟机的名称
+    v.name = "k8s-node#{i}"
+    # 设置虚拟机的内存大小
+    v.memory= 4096
+    # 设置虚拟机的CPU个数
+    v.cpus = 4
+   end
+  end
+ end
 end
 
 ```
+
 ### 创建k8s集群
 
 [批量创建k8s集群](https://medium.com/@raj10x/multi-node-kubernetes-cluster-with-vagrant-virtualbox-and-kubeadm-9d3eaac28b98)
@@ -189,6 +192,6 @@ Vagrant.configure("2") do |config|
             config.vm.provider "virtualbox" do |v|
 
                 v.name = opts[:name]
-            	 v.customize ["modifyvm", :id, "--groups", "/Ballerina Development"]
+              v.customize ["modifyvm", :id, "--groups", "/Ballerina Development"]
                 v.customize ["modifyvm", :id, "--memory", opts[:mem]]
 ```

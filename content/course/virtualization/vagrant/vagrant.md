@@ -6,13 +6,15 @@ weight: 20
 ---
 
 ## Vagrant 简介
- 
+
 ## 安装
+
 [Vagrant官网](https://www.vagrantup.com/)
 
 [Vagrant镜像地址](https://app.vagrantup.com/boxes/search)
 
 ## 使用
+
 ```bash
 # 创建虚拟机
 vagrant up
@@ -124,13 +126,25 @@ VBoxManage list runningvms
 
 VBoxManage guestproperty enumerate slaver1-51| grep "Net.*V4.*IP"
 ```
+
 ---
 
-## 安装插件
-[vagrant-scp使用方法](https://github.com/invernizzi/vagrant-scp)
+### 插件安装
+
+`vagrant plugin install vagrant-scp`
 
 ```bash
-vagrant plugin install vagrant-scp
-
-vagrant scp file.txt :file.txt
+示例如下：
+------------------------------------------------
+命令    参数   本地文件            虚拟机名称:~/传输到虚拟机文件夹位置
+vagrant scp    local_file.txt     vm_name:~/remote_file.txt
 ```
+
+### 详解
+
+- vagrant： 命令
+- scp ：参数
+- local_file.txt : 本地文件
+- vm_name: 虚拟机名称
+- ~/remote_file.txt : 传输到虚拟机中的绝对路径位置
+  
