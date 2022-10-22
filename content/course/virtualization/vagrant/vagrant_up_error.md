@@ -7,6 +7,7 @@ weight: 20
 
 
 在ubuntu系统上执行vagrant up 报错如下
+
 ```bash
 root@m:~# vagrant up
 No usable default provider could be found for your system.
@@ -25,9 +26,11 @@ why a particular provider isn't working by forcing usage with
 error message for that particular provider.
 
 ```
-可使用 `vagrant up --provider virtualbox` 查看出错原因
+
+可使用 **`vagrant up --provider virtualbox`** 查看出错原因
 下面说 当前的 VirtualBox 版本不支持 vagrant 下面已经把支持的版本号列出了，
 在VirtualBox官网下载对应的版本即可
+
 ```bash
 root@m:~# vagrant up --provider virtualbox
 The provider 'virtualbox' that was requested to back the machine

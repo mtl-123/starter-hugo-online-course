@@ -137,7 +137,7 @@ VBoxManage guestproperty enumerate slaver1-51| grep "Net.*V4.*IP"
 示例如下：
 ------------------------------------------------
 命令    参数   本地文件            虚拟机名称:~/传输到虚拟机文件夹位置
-vagrant scp    local_file.txt     vm_name:~/remote_file.txt
+vagrant scp    local_file.txt     vm_name:~/
 ```
 
 ### 详解
@@ -146,5 +146,5 @@ vagrant scp    local_file.txt     vm_name:~/remote_file.txt
 - scp ：参数
 - local_file.txt : 本地文件
 - vm_name: 虚拟机名称
-- ~/remote_file.txt : 传输到虚拟机中的绝对路径位置
+- ~/: 传输到虚拟机中的绝对路径位置
   
