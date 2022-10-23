@@ -85,24 +85,24 @@ end
 > 创建不同的主机名称
 
 ```ruby
-Vagrant.configure("2") do | config|
+Vagrant.configure("2") do |config|
     config.vm.box = "centos/7"
-    config.vm.hostname = "DevOps-Demo"
-    config.vm.box_version "1905.1"
-    config.vm.define "jenkins" do |jenk|
-        jenk.vm.hostname = "jenk"
-        jenk.memory = 4096
-        jenk.cpus = 4
-        # 设置虚拟机的IP
-        jenk.vm.network "private_network", ip: "192.168.56.10", netmask: "255.255.255.0"
-    end
+    config.vm.hostname = "Vagrant-demo"
+    config.vm.box_version = "1509.01"
     config.vm.define "gitlab" do |git|
         git.vm.hostname = "git"
         git.memory = 4096
         git.cpus = 4
         git.vm.network "private_network", ip: "192.168.56.10", netmask: "255.255.255.0"
     end
+    config.vm.define "jenkins" do |jk|
+        jk.vm.hostname = "do"
+        jk.memory = 4096
+        jk.cpus = 4
+        jk.vm.network "private_network", ip: "192.168.56.20", netmask: "255.255.255.0"
+    end
 end
+
 ```
 
 ### 创建k8s集群
