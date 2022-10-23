@@ -14,6 +14,8 @@ weight: 20
 
 [Vagrant镜像地址](https://app.vagrantup.com/boxes/search)
 
+[Vagrant命令手册](https://www.vagrantup.com/docs/cli)
+
 ## 安装
 
 ```bash
@@ -23,7 +25,7 @@ https://releases.hashicorp.com/vagrant/2.3.2/vagrant_2.3.2_windows_amd64.msi
 # ubuntu 系统
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update && sudo apt install vagrant
+sudo apt update && sudo apt install vagrant -y
 
 # centos 系统
 sudo yum install -y yum-utils
@@ -39,7 +41,6 @@ sudo yum -y install vagrant
 ## 查看
 
 ```bash
-
 # 下载虚拟机镜像可选择不同虚拟机平台的系统镜像文件
 vagrant box add generic/ubuntu2004
 # 指定需要下载的虚拟机平台和系统镜像版本
@@ -48,6 +49,8 @@ vagrant box add generic/ubuntu2004 --provider=virtualbox --box-version=3.1.22
 vagrant box list
 # 查看已经创建的box虚拟机配置文件详情
 vagrant ssh-config
+# 查看所有box运行状态
+vagrant status 
 ```
 
 ## 初始化
@@ -116,7 +119,7 @@ vagrant global-status --prune
 
 ```bash
 # 进入指定虚拟机内部
-vagrant ssh box vm_name
+vagrant ssh  vm_name
 ```
 
 ## 网络
@@ -176,4 +179,8 @@ vagrant scp local_file vm_name:~/remote_file_path
 ```bash
 # 作用：提高虚拟机效率
 vagrant  plugin install  vagrant-vbguest
+# 安装指定版本的vbguest插件
+vagrant plugin install vagrant-vbguest --plugin-version 0.21
+# 卸载插件
+vagrant plugin uninstall vagrant-vbguest
 ```
