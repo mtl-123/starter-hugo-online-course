@@ -147,4 +147,94 @@ vagrant scp    local_file.txt     vm_name:~/
 - local_file.txt : 本地文件
 - vm_name: 虚拟机名称
 - ~/: 传输到虚拟机中的绝对路径位置
+
+
+# vagrant 常用命令
+
+## 查看
+```bash
+# 查看下载到本地的box镜像
+vagrant box list
+# 查看已经创建的box虚拟机配置文件详情
+vagrant ssh-config
+#
+vagrant global-status --prune
+```
+## 初始化
+```bash
+# 指定box镜像初始化,会得到一个 Vagrantfile文件，里面使用的基础box是初始化指定的box镜像名
+vagrant init centos-vim
+```
+## 启动
+```bash
+# 启动所有虚拟机
+vagrant up
+# 指定某台虚拟机启动
+vagrant up vm_name
+# 指定box虚拟化平台并启动
+vagrant up --provider virtualbox
+```
+## 停止
+```bash
+# 关机所有box
+vagrant halt
+# 指定某台box关机
+vagrant halt vm_name
+```
+## 删除
+```bash
+# 删除box镜像
+vagrant box remove box_name
+# 强制删除所有创建的box虚拟机
+vagrant destroy --force
+# 指定某台box虚拟机进行删除
+vagrant destroy vm_name --force
+```
+
+## 打包
+```bash
+# 插件vagrant-vbguest
+# 作用：提高box运行效率
+# 安装指定版本的agrant-vbguest插件
+vagrant plugin install vagrant-vbguest --plugin-version 0.21
+# 把当前做好的box环境打包成box镜像，导出的box名为package.box
+vagrant package --bash   vm_name
+# 如何使用打包的package.box镜像
+vagrant  box add --name centos-vim --provider=virtualbox ./package.box
+# 查看创建的centos-vim的基础box
+vagrant box list
+```
+## 共享box到
+
+vim metadata.json
+
+```json
+{"provider": "virtualbox"}
+```
+## 进入box内部
+vagrant ssh box
+
+## 插件
+### scp
+```bash
+# 作用： 复制宿主机文件到box内部
+# 安装
+vagrant plugin install vagrant-scp
+# 示例：
+vagrant scp local_file vm_name:~/remote_file_path
+```
+
+
+## Vagrantfile
+
+```ruby
+Vagrant.configure("2") do |config|
+  # 定义虚拟机 do ||
+  config.vm.box = "ubuntu/xenial64"do |jenkins|
+  # 定义虚拟机平台
+  config.vm.provider = "virtualbox"
+  config.vm.provision :shell, path: "bootstrap.sh"
+
+end
+```
   
