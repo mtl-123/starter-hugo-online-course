@@ -82,24 +82,55 @@ end
 ---
 
 ### 写法三
+
 > 创建不同的主机名称
 
 ```ruby
+# vi: set ft=ruby :
+
+servers = [
+    {
+        :name => "gitlab",
+        :type => "master",
+        :box => "ubuntu/xenial64",
+        :box_version => "20180831.0.0",
+        :eth1 => "192.168.56.10",
+        :mem => "4094",
+        :cpu => "2"
+    },
+    {
+        :name => "jenkins",
+        :type => "node",
+        :box => "ubuntu/xenial64",
+        :box_version => "20180831.0.0",
+        :eth1 => "192.168.56.11",
+        :mem => "4094",
+        :cpu => "2"
+    },
+    {
+        :name => "k8s-master",
+        :type => "node",
+        :box => "ubuntu/xenial64",
+        :box_version => "20180831.0.0",
+        :eth1 => "192.168.56.12",
+        :mem => "4094",
+        :cpu => "2"
+    }
+]
+
 Vagrant.configure("2") do |config|
-    config.vm.box = "centos/7"
-    config.vm.hostname = "Vagrant-demo"
-    config.vm.box_version = "1509.01"
-    config.vm.define "gitlab" do |git|
-        git.vm.hostname = "git"
-        git.memory = 4096
-        git.cpus = 4
-        git.vm.network "private_network", ip: "192.168.56.10", netmask: "255.255.255.0"
-    end
-    config.vm.define "jenkins" do |jk|
-        jk.vm.hostname = "do"
-        jk.memory = 4096
-        jk.cpus = 4
-        jk.vm.network "private_network", ip: "192.168.56.20", netmask: "255.255.255.0"
+    servers.each do |opts|
+        config.vm.define opts[:name] do |config|
+            config.vm.box = opts[:box]
+            config.vm.box_version = opts[:box_version]
+            config.vm.hostname = opts[:name]
+            config.vm.network :private_network, ip: opts[:eth1]
+            config.vm.provider "virtualbox" do |v|
+                v.name = opts[:name]
+                v.customize ["modifyvm", :id, "--groups", "/Ballerina Development"]
+                v.customize ["modifyvm", :id, "--memory", opts[:mem]]
+            end
+        end
     end
 end
 
@@ -119,8 +150,8 @@ servers = [
         :type => "master",
         :box => "ubuntu/xenial64",
         :box_version => "20180831.0.0",
-        :eth1 => "192.168.205.10",
-        :mem => "2048",
+        :eth1 => "192.168.56.10",
+        :mem => "4094",
         :cpu => "2"
     },
     {
@@ -128,8 +159,8 @@ servers = [
         :type => "node",
         :box => "ubuntu/xenial64",
         :box_version => "20180831.0.0",
-        :eth1 => "192.168.205.11",
-        :mem => "2048",
+        :eth1 => "192.168.56.11",
+        :mem => "4094",
         :cpu => "2"
     },
     {
@@ -137,8 +168,8 @@ servers = [
         :type => "node",
         :box => "ubuntu/xenial64",
         :box_version => "20180831.0.0",
-        :eth1 => "192.168.205.12",
-        :mem => "2048",
+        :eth1 => "192.168.56.12",
+        :mem => "4094",
         :cpu => "2"
     }
 ]
@@ -203,7 +234,7 @@ SCRIPT
 $configureNode = <<-SCRIPT
     echo "This is worker"
     apt-get install -y sshpass
-    sshpass -p "vagrant" scp -o StrictHostKeyChecking=no vagrant@192.168.205.10:/etc/kubeadm_join_cmd.sh .
+    sshpass -p "vagrant" scp -o StrictHostKeyChecking=no vagrant@192.168.56.10:/etc/kubeadm_join_cmd.sh .
     sh ./kubeadm_join_cmd.sh
 SCRIPT
 
@@ -229,4 +260,3 @@ end
 
 ```
 
----
