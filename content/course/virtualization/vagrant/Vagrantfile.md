@@ -1,6 +1,6 @@
 ---
 title: Vagrantfile 模板编写
-date: '2022-10-16'
+date: '2022-10-23'
 type: book
 weight: 20
 ---
@@ -44,6 +44,8 @@ Vagrant.configure("2") do | config|
 
 ```
 
+---
+
 ### 写法二
 
 ```ruby
@@ -75,6 +77,32 @@ Vagrant.configure("2") do | config|
  end
 end
 
+```
+
+---
+
+### 写法三
+> 创建不同的主机名称
+
+```ruby
+Vagrant.configure("2") do | config|
+    config.vm.box = "centos/7"
+    config.vm.hostname = "DevOps-Demo"
+    config.vm.box_version "1905.1"
+    config.vm.define "jenkins" do |jenk|
+        jenk.vm.hostname = "jenk"
+        jenk.memory = 4096
+        jenk.cpus = 4
+        # 设置虚拟机的IP
+        jenk.vm.network "private_network", ip: "192.168.56.10", netmask: "255.255.255.0"
+    end
+    config.vm.define "gitlab" do |git|
+        git.vm.hostname = "git"
+        git.memory = 4096
+        git.cpus = 4
+        git.vm.network "private_network", ip: "192.168.56.10", netmask: "255.255.255.0"
+    end
+end
 ```
 
 ### 创建k8s集群
@@ -200,3 +228,5 @@ Vagrant.configure("2") do |config|
 end
 
 ```
+
+---
