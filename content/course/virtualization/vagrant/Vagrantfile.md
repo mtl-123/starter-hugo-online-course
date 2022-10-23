@@ -92,8 +92,8 @@ servers = [
     {
         :name => "gitlab",
         :type => "master",
-        :box => "ubuntu/xenial64",
-        :box_version => "20180831.0.0",
+        :box => "ubuntu/focal64",
+        :box_version => "20221021.0.0",
         :eth1 => "192.168.56.10",
         :mem => "4094",
         :cpu => "2"
@@ -101,8 +101,8 @@ servers = [
     {
         :name => "jenkins",
         :type => "node",
-        :box => "ubuntu/xenial64",
-        :box_version => "20180831.0.0",
+        :box => "ubuntu/focal64",
+        :box_version => "20221021.0.0",
         :eth1 => "192.168.56.11",
         :mem => "4094",
         :cpu => "2"
@@ -110,8 +110,8 @@ servers = [
     {
         :name => "k8s-master",
         :type => "node",
-        :box => "ubuntu/xenial64",
-        :box_version => "20180831.0.0",
+        :box => "ubuntu/focal64",
+        :box_version => "20221021.0.0",
         :eth1 => "192.168.56.12",
         :mem => "4094",
         :cpu => "2"
