@@ -127,7 +127,7 @@ Vagrant.configure("2") do |config|
             config.vm.network :private_network, ip: opts[:eth1]
             config.vm.provider "virtualbox" do |v|
                 v.name = opts[:name]
-                v.customize ["modifyvm", :id, "--groups", "/Ballerina Development"]
+                v.customize ["modifyvm", :id, "--groups", "/DevOps Environment"]
                 v.customize ["modifyvm", :id, "--memory", opts[:mem]]
             end
         end
