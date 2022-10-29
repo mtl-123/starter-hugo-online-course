@@ -1,6 +1,6 @@
 ---
-title: ubuntu系统常见问题
-date: '2022-10-31'
+title: 系统常见问题
+date: '2022-10-17'
 type: book
 weight: 20
 ---
