@@ -30,3 +30,34 @@ sudo apt install fcitx-googlepinyin
 桌面左下角的菜单，点击Inout Method 进行设置 -> 选择fcitx -> 选择ok -> 重启电脑
 再去点击fcitx配置 -> 添加 googlepinyin 即可
 ```
+## 节约电池寿命
+```bash
+sudo apt-get install tlp tlp-rdw -y
+sudo reboot
+```
+## wifi 图标显示？号
+```bash
+
+sudo vim  /etc/NetworkManager/NetworkManager.conf
+# 可见 managed=false，把 false 改成 true
+# 重启电脑
+reboot
+```
+## 美化
+```bash
+
+sudo apt-get install gnome-tweak-tool
+
+
+sudo apt-get install gnome-shell-extensions
+
+reboot
+```
+
+## zsh
+```bash
+
+sudo apt install zsh curl -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
