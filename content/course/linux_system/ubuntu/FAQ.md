@@ -1,5 +1,5 @@
 ---
-title: ubuntu系统常见文件
+title: ubuntu系统常见问题
 date: '2022-10-31'
 type: book
 weight: 20
