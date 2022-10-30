@@ -19,3 +19,14 @@ sudo apt install brightness-controller
 # 打开这个工具即可调试亮度了
 brightness-controller
 ```
+## 安装google输入法
+
+```bash
+# 先安装fcitx
+sudo apt install fcitx -y
+# 安装google拼音
+sudo apt install fcitx-googlepinyin
+# 配置输入法
+桌面左下角的菜单，点击Inout Method 进行设置 -> 选择fcitx -> 选择ok -> 重启电脑
+再去点击fcitx配置 -> 添加 googlepinyin 即可
+```
