@@ -259,4 +259,34 @@ Vagrant.configure("2") do |config|
 end
 
 ```
+---
 
+## 远程脚本安装K8s
+```ruby
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.define "master" do |dev|
+  config.vm.box = "gbailey/amzn2"
+  config.vm.box_version = "20221023.0.0"
+  dev.vm.provider "virtualbox" do |v|
+    v.memory= 4096
+    v.cpus = 2
+    
+  config.vm.provision "B", type: "shell", inline:<<-SHELL
+  
+  echo -e "\033[33m download scritp file \033[0m"
+   wget https://raw.githubusercontent.com/mtl-123/kubernetes/mei/script/install_ctr_k8s.sh
+  echo -e "\033[31m Add executable permissions \033[0m"
+  chmod +x install_ctr_k8s.sh
+  echo "================================== start install k8s ============================================= "
+  sudo ./install_ctr_k8s.sh
+
+  echo -e "\033[32m Kubernetes install successful \033[0m"
+  
+  SHELL
+  end
+end
+end
+```
