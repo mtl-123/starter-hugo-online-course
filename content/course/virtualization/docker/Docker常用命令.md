@@ -20,3 +20,5 @@ docker images | grep k8s.gcr.io | xargs docker save -o k8s.gcr.io
 # 使用for循环创建一个i变量并使用ls 命令列出 所有*.tar未后缀的文件再使用docker 并引用$i变量导入
 for i in `ls *tar`;do  docker load -i $i;done
 ```
+# 查询
+`docker info --format {{.CgroupDriver}} `
