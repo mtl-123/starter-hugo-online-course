@@ -1,5 +1,13 @@
+---
+title: Ruby 解释器的安装
+date: '2022-10-31'
+type: book
+weight: 20
+---
 
-
+# Ruby Shell 安装
+```bash
+tee >> ./ruby-scl.sh <'EOF'
 #!/bin/sh
 
 #==============================================================================
@@ -65,3 +73,5 @@ rbenv rehash
 echo Done!
 
 echo "Executing [$0] complete"
+EOF
+```
