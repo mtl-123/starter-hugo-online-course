@@ -9,6 +9,8 @@ weight: 20
 
 <!--more-->
 
+[不错的博客](https://wukongnotnull.com/)
+
 windows 系统安装 Scope 软件安装工具
 ```vbs
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
