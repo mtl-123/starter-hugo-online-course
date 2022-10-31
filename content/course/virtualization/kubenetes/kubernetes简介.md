@@ -27,4 +27,4 @@ K8s项目由Google公司在2014年启动，Kubernetes建立在google公司超过
   - 自修复：它可以自保持应用状态、可自重启、自复制、自缩放，通过声明式语法提供了强大的自修复能力
   
 
-
+[k8s常用命令](https://www.jokerbai.com/archives/kubernetes-ri-chang-cao-zuo-ming-ling--chi-xu-geng-xin-)
