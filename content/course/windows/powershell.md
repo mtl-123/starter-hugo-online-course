@@ -1,3 +1,16 @@
+---
+title: 🤖 Windows 命令
+linkTitle: Windows
+summary: 系统
+date: '2022-11-03'
+type: book
+tags:
+  - 
+---
+
+{{< toc hide_on="x1" >}}
+
+
 # Windows常用命令
 
 [命令](https://www.hdd-tool.com/zh-TW/windows-11/disk-cleanup-on-c-drive.html)
