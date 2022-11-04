@@ -16,6 +16,8 @@ weight: 20
 
 [Vagrant命令手册](https://www.vagrantup.com/docs/cli)
 
+[本地vagrant镜像box上传到vagrant cloud并开源使用](https://www.jianshu.com/p/a5896360493b)
+
 ## 安装
 
 ```bash
