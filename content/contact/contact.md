@@ -55,3 +55,5 @@ design:
 [编程导航](https://www.code-nav.cn/)
 
 [searx](https://searx.space/)
+
+[Shell编程案例](https://zhuanlan.zhihu.com/p/387385416)
