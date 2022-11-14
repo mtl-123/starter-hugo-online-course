@@ -57,3 +57,7 @@ design:
 [searx](https://searx.space/)
 
 [Shell编程案例](https://zhuanlan.zhihu.com/p/387385416)
+
+[Bash Shell 中使用神奇的花括号](https://mp.weixin.qq.com/s/vH4IxXS3pMNSPCsO7YYc2A)
+
+[vim编辑器使用技巧](https://mp.weixin.qq.com/s/MjpRKtGIpEZWUGcCzua1dQ)
