@@ -61,3 +61,5 @@ design:
 [Bash Shell 中使用神奇的花括号](https://mp.weixin.qq.com/s/vH4IxXS3pMNSPCsO7YYc2A)
 
 [vim编辑器使用技巧](https://mp.weixin.qq.com/s/MjpRKtGIpEZWUGcCzua1dQ)
+
+[kubectl 命令](https://mp.weixin.qq.com/s/yp0ebI_4ty14_nT4VRw5rw)
