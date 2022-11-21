@@ -12,6 +12,7 @@ tags:
 
 {{< toc hide_on="xl" >}}
 
+[Python 基础](https://wukongnotnull.feishu.cn/wiki/wikcnQAq190PAkjG7WPOTmR75Hc)
 ## What you will learn
 
 - Fundamental {{<hl>}}Python programming skills{{</hl>}}
