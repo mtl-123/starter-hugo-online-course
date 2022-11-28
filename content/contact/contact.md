@@ -65,3 +65,5 @@ design:
 [kubectl 命令](https://mp.weixin.qq.com/s/yp0ebI_4ty14_nT4VRw5rw)
 
 [Python3 学习编程 ](https://www.freecodecamp.org/chinese/news/python-new-line-and-how-to-python-print-without-a-newline/)
+
+[GoLang 编程](https://www.freecodecamp.org/chinese/news/go-beginners-handbook/)
