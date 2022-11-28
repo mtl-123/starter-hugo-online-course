@@ -35,7 +35,7 @@ content:
   #     captcha: true
 
 design:
-  columns: '1'
+  columns: "1"
 ---
 
 ## 搜索引擎推荐
@@ -56,10 +56,12 @@ design:
 
 [searx](https://searx.space/)
 
-[Shell编程案例](https://zhuanlan.zhihu.com/p/387385416)
+[Shell 编程案例](https://zhuanlan.zhihu.com/p/387385416)
 
 [Bash Shell 中使用神奇的花括号](https://mp.weixin.qq.com/s/vH4IxXS3pMNSPCsO7YYc2A)
 
-[vim编辑器使用技巧](https://mp.weixin.qq.com/s/MjpRKtGIpEZWUGcCzua1dQ)
+[vim 编辑器使用技巧](https://mp.weixin.qq.com/s/MjpRKtGIpEZWUGcCzua1dQ)
 
 [kubectl 命令](https://mp.weixin.qq.com/s/yp0ebI_4ty14_nT4VRw5rw)
+
+[Python3 学习编程 ](https://www.freecodecamp.org/chinese/news/python-new-line-and-how-to-python-print-without-a-newline/)
