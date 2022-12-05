@@ -34,3 +34,7 @@ Tuples [元组]
 {{< spoiler text="Python区分大小写吗?" >}}
 是
 {{< /spoiler >}}
+
+## 加快Python运行速度的库 "taichi"
+
+[taichi](https://docs.taichi-lang.org/zh-Hans/docs/master/accelerate_python)
