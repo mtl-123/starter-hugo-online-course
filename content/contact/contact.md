@@ -50,6 +50,8 @@ design:
 
 [知识检索](https://www.cn-ki.net/)
 
+[老司机搜索引擎](https://yandex.eu/)
+
 [wikiHow](https://zh.wikihow.com/)
 
 [编程导航](https://www.code-nav.cn/)
