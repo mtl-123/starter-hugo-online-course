@@ -36,6 +36,8 @@ host_list = [
 Vagrant.configure("2") do | config|
     host_list.each do | item|
          config.vm.define item[:name] do|host|
+         # 配置宿主机文件同步
+         config.vm.synced_folder "宿主机文件路径","系统路径名称", type: "rsync"
             # 设置虚拟机的Box操作系统    
             host.vm.box = item[:box]            
          end
