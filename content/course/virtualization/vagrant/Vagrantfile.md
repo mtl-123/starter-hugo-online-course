@@ -373,3 +373,102 @@ Vagrant.configure("2") do |config|
 end
 end
 ```
+
+## 开发环境
+
++ Python
++ Shell
++ Golang
+
+```ruby
+# vi: set ft=ruby :
+
+servers = [
+  {
+      :name => "Python-Dev",
+      :type => "master",
+    #   :box => "generic/centos7",
+    #   :box_version => "4.2.6",
+      :box => "ubuntu/focal64",
+      :box_version => "20221021.0.0",
+      :eth1 => "192.168.56.100",
+      :mem => "4094",
+      :cpu => "2"
+  },
+  {
+      :name => "Shell-Dev",
+      :type => "node",
+    #   :box => "generic/centos7",
+    #   :box_version => "4.2.6",
+      :box => "ubuntu/focal64",
+      :box_version => "20221021.0.0",
+      :eth1 => "192.168.56.110",
+      :mem => "4094",
+      :cpu => "2"
+  },
+  {
+      :name => "GoLang-Dev",
+      :type => "node",
+    #   :box => "generic/centos7",
+    #   :box_version => "4.2.6",
+      :box => "ubuntu/focal64",
+      :box_version => "20221021.0.0",
+      :eth1 => "192.168.56.120",
+      :mem => "4094",
+      :cpu => "2"
+  }
+]
+
+$configureBox = <<-SCRIPT
+    # 更换国内apt源
+    cp /etc/apt/sources.list /etc/apt/sources_init.list
+    # 写入国内apt源配置
+    tee > /etc/apt/sources.list <<EOF
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+    ## Not recommended
+    # deb https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+EOF
+    apt update
+    apt install -y git vim wget curl python3-pip
+    pip3 install --upgrade pip
+    mkdir ~/.pip
+    touch ~/.pip/pip.conf
+    tee > ~/.pip/pip.conf <<EOF
+    [global]
+    index-url = https://pypi.tuna.tsinghua.edu.cn/simple 
+EOF
+
+    pip install --user pdm
+    cp -rf /root/.local/bin/* /usr/local/bin/
+    pdm self update
+    pdm completion bash > /etc/bash_completion.d/pdm.bash-completion
+
+SCRIPT
+
+ENV["LC_ALL"] = "en_US.UTF-8"
+#指定vm的语言环境，缺省地，会继承host的locale配置
+Vagrant.configure("2") do |config|
+  servers.each do |opts|
+      config.vm.define opts[:name] do |config|
+          config.vm.box = opts[:box]
+          config.vm.box_version = opts[:box_version]
+          config.vm.hostname = opts[:name]
+          config.vm.network :private_network, ip: opts[:eth1]
+          config.vm.provider "virtualbox" do |vb|
+              vb.name = opts[:name]
+              vb.customize ["modifyvm", :id, "--groups", "/DevOps Environment"]
+              vb.customize ["modifyvm", :id, "--memory", opts[:mem]]
+          config.vm.provision "shell", inline: $configureBox
+          end
+      end
+  end
+end
+```
