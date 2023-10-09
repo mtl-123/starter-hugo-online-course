@@ -1,0 +1,96 @@
+#站点设置
+#指南:https://wowchemy.com/docs/getting-started/
+#文档:https://wowchemy.com/docs/该文件使用YAML语法格式化-更多信息请访问https://learnxinyminutes.com/docs/yaml/
+# 外观
+
+appearance:
+  theme_day: custom
+  theme_night:
+  font: minimal
+  font_size: L
+
+# SEO
+
+marketing:
+  seo:
+    site_type: Organization
+    local_business_type: ''
+    org_name: ''
+    description: '一个高度可定制的Hugo学习主题,由Wowchemy网站构建器提供支持。'
+    twitter: 'wowchemy'
+  analytics:
+    google_analytics: ''
+    baidu_tongji: ''
+  verification:
+    google: ''
+    baidu: ''
+
+# 网站标题
+
+header:
+  navbar:
+    enable: true
+    align: l
+    show_logo: true
+    show_language: false
+    show_day_night: true
+    show_search: true
+    highlight_active_link: true
+
+# 站点页脚
+
+footer:
+  copyright:
+    notice: '© {year} Me. This work is licensed under {license}'
+    license:
+      enable: true
+      allow_derivatives: false
+      share_alike: true
+      allow_commercial: false
+
+# 本地化
+
+locale:
+  date_format: 'October 15, 2022'
+  time_format: '1:04 PM'
+
+# 网站功能
+
+features:
+  syntax_highlighter:
+    theme_light: github-light
+    theme_dark: dracula
+  math:
+    enable: false
+  privacy_pack:
+    enable: false
+  repository:
+    url: 'https://github.com/wowchemy/starter-hugo-online-course'
+    content_dir: content
+    branch: main
+  comment:
+    provider: ''
+    disqus:
+      shortname: ''
+      show_count: true
+    commento:
+      url: ''
+    giscus:
+      repo: ''
+      repo_id: ''
+      category: ''
+      category_id: ''
+  search:
+    provider: wowchemy
+    algolia:
+      app_id: ''
+      api_key: ''
+      index_name: ''
+      show_logo: false
+
+extensions:
+  cms:
+    branch: main
+    local_backend: false
+  academicons:
+    enable: false

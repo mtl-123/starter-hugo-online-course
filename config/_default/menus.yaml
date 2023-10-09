@@ -1,0 +1,40 @@
+#导航链接
+#要链接主页小部件，请将URL指定为哈希`#`，后跟
+#您的“content/home/”文件夹中所需的widget。
+#权重参数定义链接出现的顺序。
+
+main:
+  - name: 主页
+    url: '/'
+    weight: 10
+  
+  - name: 技术栈
+    weight: 20
+    identifier: courses
+  
+  - name: 开发
+    PageRef: course/development/_index.md
+    weight: 10
+    parent: courses
+  
+  - name: 运维
+    PageRef: course/deploy/_index.md
+    weight: 20
+    parent: courses
+  - name: DevOps
+    PageRef: course/deploy/_index.md
+    weight: 30
+    parent: courses
+  
+  - name: 博客
+    PageRef: post/_index.md
+    weight: 30
+    
+  - name: 文档
+    PageRef: contact/index.md
+    weight: 40
+    
+  - name: 搜索引擎
+    PageRef: contact/index.md
+    weight: 60
+
