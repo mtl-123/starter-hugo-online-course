@@ -1,5 +1,5 @@
 ---
-title: Linux 磁盘自动挂在
+title: Linux 磁盘自动挂载
 date: '2023-10-12'
 type: book
 weight: 20
@@ -20,6 +20,9 @@ vim auto_mount_disk_to_fstab.sh
 mkdir -pv /data
 
 # 这里是的sdb磁盘盘符要根据你环境真是的名称填写
+
+#  **注意从 <<EOF 的内容到 EOF 的内容不能删除 否则无法分区成功**
+
 fdisk /dev/sdb <<EOF
 n
 p
