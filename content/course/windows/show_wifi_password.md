@@ -1,0 +1,11 @@
+# Windows10 命令行看WiFi密码
+
+win+x  选择管理员终端
+
+netsh wlan show profile
+
+![image](https://github.com/mtl-123/starter-hugo-online-course/assets/65467296/525a96fa-4828-4e54-b9fb-3904aa6db181)
+
+netsh wlan show profile name=WiFi名称 key=clear
+
+![Uploading image.png…]()
