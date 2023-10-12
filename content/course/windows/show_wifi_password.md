@@ -8,4 +8,4 @@ netsh wlan show profile
 
 netsh wlan show profile name=WiFi名称 key=clear
 
-![Uploading image.png…]()
+![image](https://github.com/mtl-123/starter-hugo-online-course/assets/65467296/941714fb-e871-464c-b587-367e7665f5ac)
