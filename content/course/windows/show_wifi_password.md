@@ -1,3 +1,13 @@
+---
+title: 🤖 Windows10系统 查询系统WiFi密码
+linkTitle: WiFi
+summary: 系统
+date: "2023-10-12"
+type: book
+tags:
+  - command
+---
+
 # Windows10 命令行看WiFi密码
 
 win+x  选择管理员终端
