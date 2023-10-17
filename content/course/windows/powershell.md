@@ -408,3 +408,8 @@ Set-ExecutionPolicy Unrestricted
 
 ![image](https://github.com/mtl-123/starter-hugo-online-course/assets/65467296/2ab530a2-65f1-43b2-bd07-949d51f1ed5a)
 
+## 统计TCP总连接个数
+
+需打开powershell
+
+`(Get-NetTCPConnection | Measure-Object).Count`
