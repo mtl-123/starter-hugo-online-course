@@ -8,6 +8,7 @@ weight: 20
 # rsync
 
 ```bash
+#!/bin/bash
 
 scp远程拷贝和cp本地拷贝都没有断点续传功能，rsync拷贝才有断点续传功能
 
