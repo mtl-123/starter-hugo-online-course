@@ -1,4 +1,9 @@
-
+---
+title: Linux 命令行文件传输
+date: '2023-10-17'
+type: book
+weight: 20
+---
 
 # rsync
 
