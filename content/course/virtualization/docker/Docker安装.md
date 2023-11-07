@@ -80,6 +80,7 @@ cat /etc/docker/daemon.json
 # 查看用户组及成员
 sudo cat /etc/group | grep docker
 # 将docker添加到用户组
+sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 
