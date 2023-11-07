@@ -108,7 +108,7 @@ getversion="19.03.8"
 # docker x86_64架构下载地址 列表中下载自己需要的版本，我实验中使用的是19.03.8版本
 wget https://download.docker.com/linux/static/stable/x86_64/docker-${getversion}.tgz
 # 解压
-tar -zxvf docker-19.03.8.tgz
+tar -zxvf docker-$getversion.tgz
 # 移动
 sudo mv docker/* /usr/local/bin
 ```
