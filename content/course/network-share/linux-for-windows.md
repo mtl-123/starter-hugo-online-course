@@ -1,3 +1,12 @@
+---
+title: windows共享文件给linux
+date: '2023-11-07'
+type: book
+weight: 30
+highlight: true
+tags:
+  - current
+---
 
 
 > windows文件共享给linux系统
