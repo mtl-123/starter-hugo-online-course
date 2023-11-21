@@ -109,40 +109,34 @@ getversion="19.03.8"
 # docker x86_64架构下载地址 列表中下载自己需要的版本，我实验中使用的是19.03.8版本
 wget https://download.docker.com/linux/static/stable/x86_64/docker-${getversion}.tgz
 # 解压
-tar -zxvf docker-$getversion.tgz
+sudo tar -xvf docker-${getversion}.tgz -C /opt/
 # 移动
-sudo mv docker/* /opt
-sudo ln -sf /opt/docker /bin/docker
+sudo mkdir   /opt/docker/bin
+sudo mv /opt/docker/* /opt/docker/bin
+sudo ln -sf /opt/docker/bin/docker /bin/docker
 ```
 ### 添加自启动服务
 ```bash
-# ubuntu系统
-sudo vim /lib/systemd/system/docker.service
-
-# centos系统
-vim /usr/lib/systemd/system/docker.service
 # docker.service 内容如下
+cat >  /etc/systemd/system/docker.service << EOF
 [Unit]
 Description=Docker Application Container Engine
-Documentation=https://docs.docker.com
-After=network-online.target firewalld.service
-Wants=network-online.target
-
+Documentation=http://docs.docker.io
 [Service]
-Type=notify
-ExecStart=/opt/docker/dockerd		# 注意修改解压文件的绝对路径
-ExecReload=/bin/kill -s HUP $MAINPID
+Environment="PATH=/opt/docker/bin:/bin:/sbin:/usr/bin:/usr/sbin"
+ExecStart=/opt/docker/bin/dockerd
+ExecStartPost=/sbin/iptables -I FORWARD -s 0.0.0.0/0 -j ACCEPT
+ExecReload=/bin/kill -s HUP \$MAINPID
+Restart=on-failure
+RestartSec=5
 LimitNOFILE=infinity
 LimitNPROC=infinity
-TimeoutStartSec=0
+LimitCORE=infinity
 Delegate=yes
 KillMode=process
-Restart=on-failure
-StartLimitBurst=3
-StartLimitInterval=60s
-
 [Install]
 WantedBy=multi-user.target
+EOF
 
 # 添加开机自启动
 sudo systemctl enable docker
