@@ -111,7 +111,8 @@ wget https://download.docker.com/linux/static/stable/x86_64/docker-${getversion}
 # 解压
 tar -zxvf docker-$getversion.tgz
 # 移动
-sudo mv docker/* /usr/local/bin
+sudo mv docker/* /opt
+sudo ln -sf /opt/docker /bin/docker
 ```
 ### 添加自启动服务
 ```bash
@@ -129,7 +130,7 @@ Wants=network-online.target
 
 [Service]
 Type=notify
-ExecStart=/usr/local/bin/dockerd		# 注意修改解压文件的绝对路径
+ExecStart=/opt/docker/dockerd		# 注意修改解压文件的绝对路径
 ExecReload=/bin/kill -s HUP $MAINPID
 LimitNOFILE=infinity
 LimitNPROC=infinity
