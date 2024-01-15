@@ -70,6 +70,8 @@ design:
 
 [searx](https://searx.space/)
 
+[startpage](https://www.startpage.com/)
+
 [goobe](https://goobe.io/)
 
 [Shell 编程案例](https://zhuanlan.zhihu.com/p/387385416)
