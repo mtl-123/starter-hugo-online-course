@@ -265,8 +265,42 @@ do
   [[ ! -z $n ]] && virsh domifaddr $n
 done
 ```
+### 查询虚拟机中的IP地址
+```bash
+#!/bin/bash
 
+# 设置颜色代码
+GREEN=$(tput setaf 2)
+RED=$(tput setaf 1)
+NC=$(tput sgr0) # Reset color
 
+# 获取所有虚拟机名称
+vm_names=($(virsh list --all --name))
+
+# 遍历虚拟机名称列表
+for vm_name in "${vm_names[@]}"; do
+    # 获取MAC地址
+    mac_address=$(virsh dumpxml "$vm_name" | awk -F\' '/mac address/ {print $2}')
+
+    if [ -z "$mac_address" ]; then
+        echo "${RED}无法获取 $vm_name 的MAC地址${NC}"
+        continue
+    fi
+
+    # 打印虚拟机名称和MAC地址
+    echo "虚拟机名称: $vm_name, MAC地址: ${GREEN}$mac_address${NC}"
+
+    # 查询真实的IP地址
+    ip_address=$(arp -an | grep "$mac_address" | awk '{print $2}' | sed 's/[()]//g')
+
+    if [ -z "$ip_address" ]; then
+        echo "${RED}无法获取 $mac_address 的真实IP地址${NC}"
+    else
+        # 打印真实的IP地址
+        echo "真实的IP地址: ${GREEN}$ip_address${NC}"
+    fi
+done
+```
 
 
 
